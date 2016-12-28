@@ -1,0 +1,96 @@
+@mixin setSize($width:100%,$height:100%){
+	width: $width;
+	height: $height;
+}
+
+@mixin setBackgroundColor($r,$g,$b,$opacity:1){
+	background-color: rgba($r,$g,$b,$opacity);
+}
+
+.relative{
+	position:relative;
+}
+
+.absolute{
+	position: absolute;
+}
+
+.clearfix:after{
+	display: block;
+	content: "";
+	height: 0;
+	clear: all;
+	visibility: hidden;
+}
+
+body,div,ul{
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+
+ul{
+	list-style: none;
+}
+
+#banner{				
+	@extend .relative;
+	overflow: hidden;
+	.slider-ul{
+		@extend .absolute;
+		@include setSize(100%,100%);
+		.slider-li{
+			@include setSize(100%,100%);
+			@extend .absolute;
+			opacity: 0;
+			transition: 1s;
+			a{
+				@include setSize(100%,100%);
+				display: block;
+				background-size:cover ;
+				background-position: center;
+			}
+		}
+	}
+	.btn:first-of-type{
+		left: 20%;
+	}
+	.btn:last-of-type{
+		right: 20%;
+	}
+	.btn{
+		@extend .absolute;
+		@include setSize(40px,100px);
+		@include setBackgroundColor(0,0,0,.3);
+		top: 35%;
+		color: #fff;
+		font-size: 40px;
+		line-height: 100px;
+		text-align: center;
+		cursor: pointer;
+	}
+	.nav{
+		@extend .absolute;
+		@include setBackgroundColor(255,255,255,.6);
+		bottom: 20%;
+		left: 45%;
+		border-radius: 20px;
+		li{
+			@include setSize(20px,20px);
+			@include setBackgroundColor(255,255,255,.3);
+			float: left;
+			border-radius: 50%;
+			margin: 5px;
+			cursor: pointer;
+		}
+		li.active{
+			background: orange;
+		}
+	}
+}
+
+
+
+
+
+

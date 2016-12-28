@@ -1,0 +1,68 @@
+.relative, #banner {
+  position: relative; }
+
+.absolute, #banner .slider-ul, #banner .slider-ul .slider-li, #banner .btn, #banner .nav {
+  position: absolute; }
+
+.clearfix:after {
+  display: block;
+  content: "";
+  height: 0;
+  clear: all;
+  visibility: hidden; }
+
+body, div, ul {
+  margin: 0;
+  padding: 0;
+  border: 0; }
+
+ul {
+  list-style: none; }
+
+#banner {
+  overflow: hidden; }
+  #banner .slider-ul {
+    width: 100%;
+    height: 100%; }
+    #banner .slider-ul .slider-li {
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+      transition: 1s; }
+      #banner .slider-ul .slider-li a {
+        width: 100%;
+        height: 100%;
+        display: block;
+        background-size: cover;
+        background-position: center; }
+  #banner .btn:first-of-type {
+    left: 20%; }
+  #banner .btn:last-of-type {
+    right: 20%; }
+  #banner .btn {
+    width: 40px;
+    height: 100px;
+    background-color: rgba(0, 0, 0, 0.3);
+    top: 35%;
+    color: #fff;
+    font-size: 40px;
+    line-height: 100px;
+    text-align: center;
+    cursor: pointer; }
+  #banner .nav {
+    background-color: rgba(255, 255, 255, 0.6);
+    bottom: 20%;
+    left: 45%;
+    border-radius: 20px; }
+    #banner .nav li {
+      width: 20px;
+      height: 20px;
+      background-color: rgba(255, 255, 255, 0.3);
+      float: left;
+      border-radius: 50%;
+      margin: 5px;
+      cursor: pointer; }
+    #banner .nav li.active {
+      background: orange; }
+
+/*# sourceMappingURL=slider.css.map */
