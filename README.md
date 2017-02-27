@@ -1,5 +1,6 @@
 # sass-slider 轮播图
 原生js、sass编写轮播图组件，支持自定义属性
+![image](https://github.com/tangzhirong/sass-slider/blob/master/slider.png)
 ## 特点
 #### 原生JS编程，不依赖任何第三方库
 #### 组件化
